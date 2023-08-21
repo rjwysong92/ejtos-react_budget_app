@@ -5,12 +5,10 @@ import { AppProvider } from './context/AppContext';
 import Budget from './components/Budget';
 import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
-import ExpenseItem from '/components/EspenseItem';
+import ExpenseItem from './components/ExpenseItem';
 import AllocationForm from './components/AllocationForm';
 import Remaining from './components/Remaining';
 
-
-import { AppProvider } from './context/AppContext';
 const App = () => {
     return (
         <AppProvider>
