@@ -32,11 +32,16 @@ const AllocationForm = (props) => {
                 });
             }
     };
+    
+    const changeCurrency = (val)=>{
+        dispatch({
+            type: 'CHG_LOCATION',
+            payload: val,
+        })
+    }    
 
     return (
-        <div>
-            <div className='row'>
-
+        <div className='row'>
             <div className="input-group mb-3" style={{ marginLeft: '2rem' }}>
                     <div className="input-group-prepend">
                 <label className="input-group-text" htmlFor="inputGroupSelect01">Department</label>
@@ -71,10 +76,18 @@ const AllocationForm = (props) => {
                     <button className="btn btn-primary" onClick={submitEvent} style={{ marginLeft: '2rem' }}>
                         Save
                     </button>
-                </div>
-                </div>
 
-        </div>
+                    <div className='input-group-prepend'> 
+                        <label style={{ marginLeft: '1rem' , backgroundColor:'#77f2ba', color:'white'}} /> Currency    
+                        <select name='hover_color'id="currency" onChange={(event)=>changeCurrency(event.target.value)} style={{ marginLeft: '1rem' , backgroundColor:'#33FF49', color:'white'}}>
+                            <option value="£">(£ Pound)</option>
+                            <option value="₹">(₹ Rupee)</option>
+                            <option value="€">(€ Euro)</option>
+                            <option value="$">($ Dollar)</option>
+                        </select>	
+                    </div>
+                </div>
+            </div>
     );
 };
 
