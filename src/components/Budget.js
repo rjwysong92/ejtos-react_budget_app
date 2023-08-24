@@ -1,15 +1,16 @@
-import React, { useContext, useDebugValue, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
 
 const Budget = () => {
-    const { budget, currency, dispatch } = useContext(AppContext);
-    const [value, setValue] = useState(budget);
+    const { budget, currency, dispatch, } = useContext(AppContext);
+    const [newBudget, setValue] = useState(budget);
 
     const handleChange = (event) => {
         const newBudget = event.target.value;
         setValue(newBudget);
         dispatch({ type: 'SET_BUDGET', payload: newBudget });
     }
+    
 
 
     return (
@@ -18,7 +19,8 @@ const Budget = () => {
                 <input required='required'
                     type='number'
                     id='budget'
-                    value={value}
+                    step='10'
+                    value={newBudget}
                     style={{size: 10}}
                     onChange={handleChange}>
                 </input>
