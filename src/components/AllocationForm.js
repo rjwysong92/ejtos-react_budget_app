@@ -88,12 +88,12 @@ const AllocationForm = (props) => {
                     </div>
 
                     <div className='input-group-prepend'> 
-                        <label style={{ marginLeft: '1rem' , backgroundColor:'#ffd561', color:'white'}} /> Currency    
+                        <label style={{ marginLeft: '1rem' , backgroundColor:'#ffd561', color:'white'}} />     
                         <select name='hover_color'id="currency" onChange={(event)=>changeCurrency(event.target.value)} style={{ marginLeft: '1rem' , backgroundColor:'#ffd561', color:'white'}}>
-                            <option value="£">(£ Pound)</option>
-                            <option value="₹">(₹ Rupee)</option>
-                            <option value="€">(€ Euro)</option>
-                            <option value="$">($ Dollar)</option>
+                            <option value="£">Currency (£ Pound)</option>
+                            <option value="₹">Currency (₹ Rupee)</option>
+                            <option value="€">Currency (€ Euro)</option>
+                            <option value="$">Currency ($ Dollar)</option>
                         </select>	
                     </div>
                 </div>

@@ -15,7 +15,7 @@ const Budget = () => {
 
     return (
         <div className='alert alert-secondary'> 
-            <span>Budget: {currency}
+            <span>Budget: 
                 <input required='required'
                     type='number'
                     id='budget'
