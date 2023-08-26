@@ -12,15 +12,14 @@ const Location = () => {
     }
     
 
-  return (
-        <div className='alert alert-secondary'>  {
-      <select name="Currency" id="Currency" onChange={event=>changeCurrency(event.target.value)}>
-          <style backgroundColor='#6aeb97' onPointerMove= '#ffffff' fillColor ='#6aeb97'/>
+    return (
+        <div className='alert alert-secondary' style= {{backgroundColor: '#6aeb97', onPointerMove: '#ffffff', color: '#6aeb97'}}> {
+        <select name="Currency" id="Currency" onChange={event=>changeCurrency(event.target.value)}>
         <option value="£">Currency (£ Pound)</option>
         <option value="₹">Currency (₹ Rupee)</option>
         <option value="€">Currency (€ Euro)</option>
         <option value="$">Currency ($ Dollar)</option>
-      </select>	
+        </select>
       }	
     </div>
     );
